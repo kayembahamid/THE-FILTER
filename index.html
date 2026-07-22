@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="The Filter — a training game where you play the guardrail on an AI assistant. Catch prompt injections, jailbreaks, and encoded payloads. Covers the OWASP LLM Top 10 for Applications 2025." />
+  <title>The Filter — AI Prompt Injection Defense Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    Config lives on #app as data-* attributes (kept off inline <script> so the
+    page stays CSP-compatible). To change the paid key or store link, edit the
+    two attributes below — nothing else needs to change.
+  -->
+  <div class="app" id="app"
+       data-free-only="true"
+       data-gumroad-url="https://hamcodes.gumroad.com/l/jxdjnw">
+
+    <!-- Desktop-only vertical level map (hidden below 1024px via CSS) -->
+    <aside class="levelmap" id="levelmap" aria-hidden="true"></aside>
+
+    <main class="stage">
+      <!-- HUD: brand · XP · streak · level -->
+      <div class="hud">
+        <span class="brand">The Filter</span>
+        <div class="stats">
+          <span class="stat-xp" id="hudXp">0 XP</span>
+          <span class="stat-streak" id="hudStreak">🔥 0</span>
+          <span class="stat-level" id="hudLevel">Unit 1 / 7</span>
+        </div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+      <!-- Screens render here -->
+      <div id="screen"></div>
+    </main>
+  </div>
+
+  <!-- Load order matters: content + certificate provide globals the engine uses -->
+  <script src="content.js"></script>
+  <script src="certificate.js"></script>
+  <script src="engine.js"></script>
+</body>
+</html>
