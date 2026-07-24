@@ -1,5 +1,5 @@
 /* =========================================================================
-   THE FILTER — certificate.js
+   THE FILTER AI — certificate.js
    Builds an inline SVG completion certificate and converts it to a PNG
    download via the Canvas API. Self-contained: no external resources inside
    the SVG (so the canvas never taints and toDataURL/toBlob work in Safari).
@@ -43,7 +43,7 @@ function buildCertificateSVG(data) {
   var body = "'Inter',system-ui,sans-serif";
 
   return '' +
-'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="The Filter completion certificate — ' + rank + '">' +
+'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="The Filter AI completion certificate — ' + rank + '">' +
   '<defs>' +
     '<linearGradient id="tfBg" x1="0" y1="0" x2="0" y2="1">' +
       '<stop offset="0" stop-color="#182033"/>' +
@@ -69,14 +69,14 @@ function buildCertificateSVG(data) {
   '<circle cx="740" cy="512" r="3" fill="#2a3342"/>' +
 
   // eyebrow
-  '<text x="' + (W / 2) + '" y="84" text-anchor="middle" font-family="' + mono + '" font-size="14" letter-spacing="4" fill="#a78bfa">THE FILTER · AI SECURITY TRAINING</text>' +
+  '<text x="' + (W / 2) + '" y="84" text-anchor="middle" font-family="' + mono + '" font-size="14" letter-spacing="4" fill="#a78bfa">THE FILTER AI · AI SECURITY TRAINING</text>' +
 
   // title
   '<text x="' + (W / 2) + '" y="172" text-anchor="middle" font-family="' + display + '" font-weight="700" font-size="52" fill="#e7edf5">Prompt Injection</text>' +
   '<text x="' + (W / 2) + '" y="228" text-anchor="middle" font-family="' + display + '" font-weight="700" font-size="52" fill="#e7edf5">Defender</text>' +
 
   // subtitle
-  '<text x="' + (W / 2) + '" y="278" text-anchor="middle" font-family="' + body + '" font-size="17" fill="#7d8aa0">Completed The Filter — ' + levels + ' exercises of AI security training</text>' +
+  '<text x="' + (W / 2) + '" y="278" text-anchor="middle" font-family="' + body + '" font-size="17" fill="#7d8aa0">Completed The Filter AI — ' + levels + ' exercises of AI security training</text>' +
 
   // rank pill
   '<rect x="' + (W / 2 - 135) + '" y="306" width="270" height="46" rx="23" fill="#161b24" stroke="#4cc9f0" stroke-opacity="0.5"/>' +
@@ -95,7 +95,7 @@ function buildCertificateSVG(data) {
   '<text x="600" y="510" text-anchor="middle" font-family="' + mono + '" font-size="10.5" letter-spacing="1.5" fill="#7d8aa0">BREACHES</text>' +
 
   // footer
-  '<text x="40" y="' + (H - 24) + '" font-family="' + mono + '" font-size="11.5" fill="#7d8aa0">The Filter by Hamcodes · hamcodes.com</text>' +
+  '<text x="40" y="' + (H - 24) + '" font-family="' + mono + '" font-size="11.5" fill="#7d8aa0">The Filter AI by Hamcodes · hamcodes.com</text>' +
   '<text x="' + (W - 40) + '" y="' + (H - 24) + '" text-anchor="end" font-family="' + mono + '" font-size="11.5" fill="#7d8aa0">' + dateStr + '</text>' +
 '</svg>';
 }

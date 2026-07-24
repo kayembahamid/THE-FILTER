@@ -1,5 +1,5 @@
 /* =========================================================================
-   THE FILTER — engine.js
+   THE FILTER AI — engine.js
    Game logic for the Mimo-style units/steps model.
 
    Reads UNITS (and helpers) from content.js.
